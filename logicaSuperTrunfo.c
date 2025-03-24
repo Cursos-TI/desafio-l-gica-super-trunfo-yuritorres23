@@ -1,25 +1,61 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-
+    //carta
+    char estado1 = "A";
+    char carta1[3];
+    char cidade1[20];
+    int populacao1;
+    float area1;
+    float pib1;
+    int pontosTuristicos1;
     
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    printf("\n---Digitar dados Carta 1---\n");
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("Digite o codigo da primeira carta: \n");
+    scanf("%s", carta1);
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", cidade1);
+    printf("Digite a população: \n");
+    scanf("%d", &populacao1);
+    printf("Digite a area em km²: \n");
+    scanf("%f", &area1);
+    printf("Digite o PIB em bilhões: \n");
+    scanf("%f", &pib1);
+    printf("Digite o numero de Pontos Turisticos: \n");
+    scanf("%d", &pontosTuristicos1);
+
+    //carta2
+    char estado2 = "B";
+    char carta2[3];
+    char cidade2[20];
+    int populacao2;
+    float area2;
+    float pib2;
+    int pontosTuristicos2;
+
+    printf("\n---Digitar dados Carta 2---\n");
+
+    printf("Digite o codigo da segunda carta: \n");
+    scanf("%s", carta2);
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", cidade2);
+    printf("Digite a população: \n");
+    scanf("%d", &populacao2);
+    printf("Digite a area (em km²): \n");
+    scanf("%f", &area2);
+    printf("Digite o PIB (em bilhões): \n");
+    scanf("%f", &pib2);
+    printf("Digite o numero de Pontos Turisticos: \n");
+    scanf("%d", &pontosTuristicos2);
+
+    printf("\n---Exibindo os dados da carta1---\n");
+    printf("\nCódigo da carta: %s\nNome da cidade: %s\nPopulação: %d\nÁrea (em km²): %.2f\nPIB (em bilhões): %.2f\nNúmero de Pontos Turisticos: %d\n", 
+        carta1, cidade1, populacao1, area1, pib1, pontosTuristicos1);
+    printf("\n---Exibindo os dados da carta2---\n");
+    printf("\nCódigo da carta: %s\nNome da cidade: %s\nPopulação: %d\nÁrea (em km²): %.2f\nPIB (em bilhões): %.2f\nNúmero de Pontos Turisticos: %d\n", 
+        carta2, cidade2, populacao2, area2, pib2, pontosTuristicos2);
+    
 
     // Comparação de Cartas:
     // Desenvolva a lógica de comparação entre duas cartas.
