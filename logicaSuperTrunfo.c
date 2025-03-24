@@ -10,6 +10,7 @@ int main() {
     float pib1;
     int pontosTuristicos1;
     float densidadePopulacional1, pibPerCapta1;
+    float vencedor1;
     
     printf("\n---Digitar dados Carta 1---\n");
 
@@ -30,6 +31,8 @@ int main() {
 
     pibPerCapta1 = (float)pib1 / populacao1;
 
+    vencedor1 = (float)populacao1 + area1 + pib1 + pontosTuristicos1 + densidadePopulacional1 + pibPerCapta1;
+
     //carta2
     char estado2[] = "B";
     char carta2[3];
@@ -39,6 +42,7 @@ int main() {
     float pib2;
     int pontosTuristicos2;
     float densidadePopulacional2, pibPerCapta2;
+    float vencedor2;
 
     printf("\n---Digitar dados Carta 2---\n");
 
@@ -58,6 +62,8 @@ int main() {
     densidadePopulacional2 = (float)populacao2 / area2;
 
     pibPerCapta2 = (float)pib2 / populacao2;
+
+    vencedor2 = (float)populacao2 + area2 + pib2 + pontosTuristicos2 + densidadePopulacional2 + pibPerCapta2;
 
     printf("\n---Exibindo os dados da carta1---\n");
     printf("\nCódigo da carta: %s\nNome da cidade: %s\nPopulação: %d\nÁrea (em km²): %.2f\nPIB (em bilhões): %.2f\nNúmero de Pontos Turisticos: %d\nDensidade populacional: %.2f\nPIB per capta: %.2f\n", 
@@ -106,10 +112,10 @@ int main() {
 
           printf("\n  Resultado carta vencedora  \n");
 
-          if (carta1 > carta2) {
-            printf("A carta %s Venceu.\n", carta1);
+          if (vencedor1 > vencedor2) {
+            printf("A carta %f Venceu.\n", vencedor1);
         } else {
-            printf("A carta %s Venceu.\n", carta2);
+            printf("A carta %f Venceu.\n", vencedor2);
         }
         
     return 0;
