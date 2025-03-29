@@ -9,9 +9,14 @@ int main(){
     float area1 = 31.40;
     float pib1 = 20.45;
     int pontosTuristicos1 = 16;
+    float densidade_populacional1;
+    float PIB_per_capta1;
     float valor1;
 
-    valor1 = populacao1 + area1 + pib1 + pontosTuristicos1;
+    densidade_populacional1 = (float)(populacao1 / area1);
+    PIB_per_capta1 = (float)(pib1 / populacao1);
+
+    valor1 = populacao1 + area1 + pib1 + pontosTuristicos1 - densidade_populacional1 + PIB_per_capta1;
 
     printf("\n---Dados Carta 1---\n");
     printf("O nome do estado é: %s\n", estado1);
@@ -20,6 +25,8 @@ int main(){
     printf("A População de Fortaleza é: %d\n", populacao1);
     printf("A Área (em km²) é: %.2f\n", area1);
     printf("PIB (em bilhões): %.2f\n", pib1);
+    printf("Densidade populacional: %.2f\n", densidade_populacional1);
+    printf("Pib per capta: %.2f\n", PIB_per_capta1);
 
     //carta 2
         char estado2[50] = "Amazonas";
@@ -36,7 +43,7 @@ int main(){
         densidade_populacional2 = (float)(populacao2 / area2);
         PIB_per_capta2 = (float)(pib2 / populacao2);
 
-        valor2 = populacao2 + area2 + pib2 + pontosTuristicos2;
+        valor2 = populacao2 + area2 + pib2 + pontosTuristicos2 - densidade_populacional2 + PIB_per_capta2;
         
         printf("\n---Dados Carta 2---\n");
         printf("O nome do estado é: %s\n", estado2);
@@ -45,6 +52,8 @@ int main(){
         printf("A População de Manaus é: %d\n", populacao2);
         printf("A Área (em km²) é: %.2f\n", area2);
         printf("PIB (em bilhões): %.2f\n", pib2);
+        printf("Densidade populacional: %.2f\n", densidade_populacional2);
+        printf("Pib per capta: %.2f\n", PIB_per_capta2);
         
         printf("\n---Comparando os valores---\n");
 
@@ -72,6 +81,12 @@ int main(){
             printf("%s tem mais Pontos Turisticos.\n", cidade2);
         }
 
+        if (densidade_populacional1 < densidade_populacional2) {
+            printf("%s tem a menor densidade populacional.\n", cidade1);
+        } else {
+            printf("%s tem a menor densidade populacional.\n", cidade2);
+        }
+        
         //Determinando a carta vencedora
         printf("\n   Descobrindo a carta vencedora   \n");
         if (valor1 > valor2) {
