@@ -29,7 +29,12 @@ int main(){
         float area2 = 41.401;
         float pib2 = 6.45;
         int pontosTuristicos2 = 7;
+        float densidade_populacional2;
+        float PIB_per_capta2;
         float valor2;
+
+        densidade_populacional2 = (float)(populacao2 / area2);
+        PIB_per_capta2 = (float)(pib2 / populacao2);
 
         valor2 = populacao2 + area2 + pib2 + pontosTuristicos2;
         
