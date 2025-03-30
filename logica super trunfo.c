@@ -13,7 +13,7 @@ int main(){
     float PIB_per_capta1;
     float valor1;
 
-    densidade_populacional1 = (float)(populacao1 / area1);
+    densidade_populacional1 = (float)populacao1 / area1;
     PIB_per_capta1 = (float)(pib1 / populacao1);
 
     valor1 = populacao1 + area1 + pib1 + pontosTuristicos1 - densidade_populacional1 + PIB_per_capta1;
@@ -44,6 +44,16 @@ int main(){
         PIB_per_capta2 = (float)(pib2 / populacao2);
 
         valor2 = populacao2 + area2 + pib2 + pontosTuristicos2 - densidade_populacional2 + PIB_per_capta2;
+
+        printf("\n---Dados Carta 2---\n");
+    printf("O nome do estado é: %s\n", estado2);
+    printf("O código da carta é: %s\n", carta2);
+    printf("O nome da cidade é: %s\n", cidade2);
+    printf("A População de Fortaleza é: %d\n", populacao2);
+    printf("A Área (em km²) é: %.2f\n", area2);
+    printf("PIB (em bilhões): %.2f\n", pib2);
+    printf("Densidade populacional: %.2f\n", densidade_populacional2);
+    printf("Pib per capta: %.2f\n", PIB_per_capta2);
         
         // menu do jogo
         int opcao;
@@ -55,7 +65,7 @@ int main(){
         printf("5. Densidade Populacional\n");
         printf("6. Carta vencedora\n");
         printf("Escolha uma opção!\n");
-        scanf("%d", opcao);
+        scanf("%d", &opcao);
         
         printf("\n---Comparando os valores---\n");
 
@@ -63,43 +73,54 @@ int main(){
         case 1:
          if (populacao1 > populacao2) 
             printf("%s tem a maior população.\n", cidade1);
-         if else 
+         else if (populacao1 < populacao2)
             printf("%s tem a maior população.\n", cidade2);
-
-        
-
+         else 
+            printf("Empate\n");
+         break;
+        case 2:
          if (area1 > area2) 
             printf("%s tem a maior área(em km²).\n", cidade1);
-         if else 
+         else if (area1 < area2)
             printf("%s tem a maior área(em km²).\n", cidade2);
-        
-
-        if (pib1 > pib2) 
+         else 
+            printf("Empate\n");
+         break;
+        case 3:
+         if (pib1 > pib2) 
             printf("%s tem o maior PIB.\n", cidade1);
-        else 
+         else if (pib1 < pib2)
             printf("%s tem o maior PIB.\n", cidade2);
-        
-
-        if (pontosTuristicos1 > pontosTuristicos2) 
+         else
+            printf("Empate\n");
+         break;
+        case 4:
+         if (pontosTuristicos1 > pontosTuristicos2) 
             printf("%s tem mais Pontos Turisticos.\n", cidade1);
-         if else 
+         else if (pontosTuristicos1 < pontosTuristicos2)
             printf("%s tem mais Pontos Turisticos.\n", cidade2);
-        
-
-        if (densidade_populacional1 < densidade_populacional2) 
+         else
+            printf("Empate\n");
+         break;
+        case 5:
+         if (densidade_populacional1 < densidade_populacional2) 
             printf("%s tem a menor densidade populacional.\n", cidade1);
-         if else 
+         else if (densidade_populacional2 < densidade_populacional1)
             printf("%s tem a menor densidade populacional.\n", cidade2);
-        
-        
-        //Determinando a carta vencedora
-        printf("\n--- Descobrindo a carta vencedora ---\n");
-        if (valor1 > valor2) 
-            printf("%s Venceu!\n", carta1);
+         else 
+            printf("Empate\n");
+         break;
+        case 6:
+         if (valor1 > valor2) 
+            printf("A Carta %s Venceu!\n", carta1);
          else if (valor1 < valor2) 
-            printf("%s Venceu!.\n", carta2);
+            printf("A Carta %s Venceu!.\n", carta2);
          else 
             printf("Houve um empate!\n");
+         break;
+        default:
+            printf("Opção Invalida!\n");
+         break;
         }
 
 
