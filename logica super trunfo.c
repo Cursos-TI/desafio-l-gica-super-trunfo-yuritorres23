@@ -40,7 +40,7 @@ int main(){
         float PIB_per_capta2;
         float valor2;
 
-        densidade_populacional2 = (float)(populacao2 / area2);
+        densidade_populacional2 = (float)populacao2 / area2;
         PIB_per_capta2 = (float)(pib2 / populacao2);
 
         valor2 = populacao2 + area2 + pib2 + pontosTuristicos2 - densidade_populacional2 + PIB_per_capta2;
@@ -49,7 +49,7 @@ int main(){
     printf("O nome do estado é: %s\n", estado2);
     printf("O código da carta é: %s\n", carta2);
     printf("O nome da cidade é: %s\n", cidade2);
-    printf("A População de Fortaleza é: %d\n", populacao2);
+    printf("A População de Manaus é: %d\n", populacao2);
     printf("A Área (em km²) é: %.2f\n", area2);
     printf("PIB (em bilhões): %.2f\n", pib2);
     printf("Densidade populacional: %.2f\n", densidade_populacional2);
@@ -57,7 +57,7 @@ int main(){
         
         // menu do jogo
         int opcao;
-        printf("\n---Escolha um numero para interagir---\n");
+        printf("\n--- Escolha um numero para interagir ---\n");
         printf("1. População\n");
         printf("2. Área\n");
         printf("3. PIB\n");
@@ -103,10 +103,10 @@ int main(){
             printf("Empate\n");
          break;
         case 5:
-         if (densidade_populacional1 < densidade_populacional2) 
-            printf("%s tem a menor densidade populacional.\n", cidade1);
-         else if (densidade_populacional2 < densidade_populacional1)
-            printf("%s tem a menor densidade populacional.\n", cidade2);
+         if (densidade_populacional1 > densidade_populacional2) 
+            printf("%s tem a maior densidade populacional.\n", cidade1);
+         else if (densidade_populacional1 < densidade_populacional2)
+            printf("%s tem a maior densidade populacional.\n", cidade2);
          else 
             printf("Empate\n");
          break;
